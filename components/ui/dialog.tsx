@@ -65,6 +65,9 @@ function DialogContent({
         )}
         {...props}
       >
+        {/* Título accesible por defecto (oculto visualmente) para evitar el error de Radix */}
+        <DialogPrimitive.Title className="sr-only">Dialog</DialogPrimitive.Title>
+
         {children}
         {showCloseButton && (
           <DialogPrimitive.Close
